@@ -6,7 +6,7 @@ import requests
 import re
 import pandas as pd
 from bs4 import BeautifulSoup
-website_url = requests.get('https://fantasy.nfl.com/research/scoringleaders?position=O&statCategory=stats&statSeason=2019&statType=seasonStats&statWeek=5').text
+website_url = requests.get('https://fantasy.nfl.com/research/scoringleaders').text
 path = './top_25.csv'
 
 soup = BeautifulSoup(website_url, 'html.parser') # parses entire page
